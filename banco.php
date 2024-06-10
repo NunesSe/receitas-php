@@ -1,6 +1,6 @@
 <?php 
 
-    $banco = new mysqli("localhost", "root", "", "receitas");
+    $banco = new mysqli("localhost:3307", "root", "", "receitas");
 
     function criarUsuario(string $usuario, string $nome, string $senha) {
         global $banco;
@@ -79,7 +79,7 @@
         global $banco;
         $usuarioId = buscarUsuario($usuario)->fetch_object()->usuario_id;
 
-        $q = "SELECT r.titulo AS tituloReceita, r.texto AS textoReceita, c.nome AS nomeCategoria, u.nome AS nomeUsuario, u.usuario AS usuario
+        $q = "SELECT r.receita_id AS receitaId, r.titulo AS tituloReceita, r.texto AS textoReceita, c.nome AS nomeCategoria, u.nome AS nomeUsuario, u.usuario AS usuario
         FROM receitas r
         JOIN categorias c ON r.categoria_id = c.categoria_id
         JOIN usuarios u ON r.usuario_id = u.usuario_id
@@ -88,4 +88,34 @@
         $busca = $banco->query($q);
         return $busca;
     }
+
+    function buscarReceitasPorId(int $id) {
+        global $banco;
+        $q = "SELECT r.titulo AS tituloReceita, r.texto AS textoReceita, c.nome AS nomeCategoria, u.nome AS nomeUsuario, u.usuario AS usuario
+        FROM receitas r
+        JOIN categorias c ON r.categoria_id = c.categoria_id
+        JOIN usuarios u ON r.usuario_id = u.usuario_id
+        WHERE r.receita_id = $id;";
+
+        $busca = $banco->query($q);
+
+        return $busca;
+    }
+
+    function atualizarReceita($receitaId, $titulo, $categoria, $descricao) {
+        global $banco;
+
+        $q = "UPDATE receitas SET categoria_id = '$categoria', titulo = '$titulo', texto = '$descricao' WHERE receita_id = '$receitaId'";
+
+        $banco->query($q);
+    }
+
+    function deletarReceita($id) {
+        global $banco;
+
+        $q = "DELETE FROM receitas WHERE receita_id = '$id'";
+
+        $banco->query($q);
+    }
+
 ?>
