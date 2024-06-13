@@ -18,7 +18,7 @@
                         echo 
                         "<a href=\"http://localhost/receitas-php\">
                             <form method=\"post\">
-                                <input type=\"submit\" name=\"sair\"  value=\"Sair\" id=\"\">
+                                <input type=\"submit\" name=\"sair\"  value=\"Sair\" id=\"\" class=\"btn btn-outline-light\">
                             </form>
                         </a>
                         <a href=\"http://localhost/receitas-php/paginas/minhas-receitas.php\">Minha receitas</a>";

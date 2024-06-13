@@ -6,12 +6,11 @@
     }
 ?>
 
-<header>
-    <nav>
-        <ul>
+
+        
        
-            <li><a href="http://localhost/receitas-php">Receitas</a></li>
-            <li>
+            <a href="http://localhost/receitas-php">Receitas</a>
+            <br>
                 <?php 
                     $validacao = $_SESSION["usuario"] ?? null;
                     if($validacao != null) {
@@ -29,7 +28,5 @@
 
                     
                 ?>
-            </li>
-        </ul>
-    </nav>
-</header>
+            
+        

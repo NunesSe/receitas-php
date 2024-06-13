@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <p>
+<body class="p-3 mb-2 bg-dark text-white d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
         <?php 
             session_start();
-            require_once "../layouts/header.php";
+            //require_once "../layouts/header.php";
             require_once "../banco.php";
             require_once "../forms/cadastro-form.php";
 
@@ -19,15 +20,14 @@
 
             if($usuario != null && $nome != null && $senha != null) {
                 if(usuarioJaExiste($usuario)) {
-                    echo "Usuario já esta sendo utilizado! Tente novamente!";
-                    return;
-                } 
-
-                criarUsuario($usuario, $nome, $senha);
-                echo "Usuario cadastrado com sucesso!";
-                $_SESSION["usuario"] = $usuario;
+                    echo "<div class='alert alert-danger' role='alert'>Usuário já está sendo utilizado! Tente novamente!</div>";
+                } else {
+                    criarUsuario($usuario, $nome, $senha);
+                    echo "<div class='alert alert-success' role='alert'>Usuário cadastrado com sucesso!</div>";
+                    $_SESSION["usuario"] = $usuario;
+                }
             }
         ?>
-    </p>
+    </div>
 </body>
 </html>

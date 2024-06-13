@@ -24,5 +24,5 @@
     <input type="text" name="texto" id="">
 
     <br>
-    <input type="submit" value="Enviar receita!">
+    <input type="submit" value="Enviar receita!" class='btn btn-outline-light'>
 </form>
