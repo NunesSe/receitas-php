@@ -1,4 +1,5 @@
 <form action="" method="post">
+    <br>
     <label for="">Usuario:</label>
     <input type="text" name="usuario" id="">
     <br>
@@ -15,7 +16,7 @@
     <br>
     <br>
     
-    <div class="p-3 mb-2 bg-white text-dark rounded"  style="width: 270px;">
+    <div class="p-3 mb-2 bg-white text-dark rounded text-center"  style="width: 270px;">
         <a href="../paginas/cadastro.php">Não tem uma conta? Cadastre-se</a>
     </div>
 

@@ -6,7 +6,7 @@
     <title>Login</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="p-3 mb-2 bg-dark text-white d-flex justify-content-center align-items-center vh-100">
+<body class="p-0 mb-2 bg-dark text-white position-relative position-absolute top-50 start-0 translate-middle">
     <div class="text-center">
         <?php 
             session_start();
@@ -17,10 +17,14 @@
                 header("Location: ../index.php");
                 return;
             }
-
+            echo "<div class='p-3 mb-2 bg-white text-dark rounded' style='width: 100vw;'>";
+            require_once "../layouts/header.php";
+            echo "</div>";
             require_once "../banco.php";
+            echo "<div class=''>";
             require_once "../forms/login-form.php";
-
+            echo "</div>";
+            
             $usuario = $_POST["usuario"] ?? null;
             $senha = $_POST["senha"] ?? null;
 

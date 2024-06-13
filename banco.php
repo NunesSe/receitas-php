@@ -1,6 +1,6 @@
 <?php 
 
-    $banco = new mysqli("localhost", "root", "", "receitas");
+    $banco = new mysqli("localhost:3307", "root", "", "receitas");
 
     function criarUsuario(string $usuario, string $nome, string $senha) {
         global $banco;

@@ -10,7 +10,7 @@
     <div class="text-center">
         <?php 
             session_start();
-            //require_once "../layouts/header.php";
+            require_once "../layouts/header.php";
             require_once "../banco.php";
             require_once "../forms/cadastro-form.php";
 
