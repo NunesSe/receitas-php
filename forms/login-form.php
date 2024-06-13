@@ -16,7 +16,7 @@
     <br>
     <br>
     
-    <div class="p-3 mb-2 bg-white text-dark rounded text-center"  style="width: 270px;">
+    <div class="p-3 mb-2 bg-white text-dark rounded text-center"  style="width: 270px; margin: 0 auto;">
         <a href="../paginas/cadastro.php">Não tem uma conta? Cadastre-se</a>
     </div>
 

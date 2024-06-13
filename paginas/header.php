@@ -14,7 +14,9 @@
                         <form method=\"post\">
                         <input type=\"submit\" name=\"sair\"  value=\"Sair\" id=\"\" class=\"btn btn-outline-light\">
                         </form>
+                        <div style= 'justify-content: right;'> 
                         <a href=\"http://localhost/receitas-php/paginas/minhas-receitas.php\">Minha receitas</a>";
+                        echo "</div>"; 
                         
                         if(isset($_POST["sair"])) {
                             unset($_SESSION["usuario"]);

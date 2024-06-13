@@ -9,7 +9,7 @@
 <body class="p-0 mb-2 bg-dark text-white position-relative position-absolute top-50 start-0 translate-middle">
     <?php 
         echo "<div class='text-center position-absolute top-0 start-50 translate-middle'>";
-            echo "<div class='p-3 mb-2 bg-white text-dark rounded' style='width: 100vw;'>";
+            echo "<div class='p-3 mb-2 bg-white text-dark rounded' style='width: 100vw; display: flex; justify-content: center;'>";
                 session_start();
                 require_once "./layouts/header.php";
                 require_once "banco.php";

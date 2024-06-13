@@ -17,7 +17,7 @@
                 header("Location: ../index.php");
                 return;
             }
-            echo "<div class='p-3 mb-2 bg-white text-dark rounded' style='width: 100vw;'>";
+            echo "<div class='p-3 mb-2 bg-white text-dark rounded' style='width: 100vw; display: flex; justify-content: space-around;'>";
             require_once "../layouts/header.php";
             echo "</div>";
             require_once "../banco.php";

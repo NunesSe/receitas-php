@@ -1,4 +1,4 @@
-<a href="http://localhost/receitas-php/paginas/cadastrar-receita.php">Cadastrar uma receita</a>
+<a href="http://localhost/receitas-php/paginas/cadastrar-receita.php" class="btn btn-outline-light">Cadastrar uma receita</a>
 <br>
 <form action="" method="post">
     <select name="categoriaFiltro">
@@ -39,14 +39,15 @@
     } else {
 
         while ($obj_receita = $receitas->fetch_object()) {
-            echo "$obj_receita->tituloReceita";
-            echo "<br>";
-            echo "De $obj_receita->nomeUsuario (@$obj_receita->usuario)";
-            echo "<br>";
-            echo "Categoria: $obj_receita->nomeCategoria";
-            echo "<br>";
-            echo "$obj_receita->textoReceita";
-            echo "<hr>";
+            echo "<br>
+            <div class=\"card\" style=\"width: 20rem; color: black; margin: 0 auto;\">
+                <div class=\"card-body\">
+                    <h5 class=\"card-title\">$obj_receita->tituloReceita</h5>
+                    <h6 class=\"card-subtitle mb-2 text-body-secondary\">De $obj_receita->nomeUsuario (@$obj_receita->usuario)</h6>
+                    <h6 class=\"card-subtitle mb-2 text-body-secondary\">De Categoria: $obj_receita->nomeCategoria</h6>
+                    <p class=\"card-text\">$obj_receita->textoReceita.</p>
+                </div>
+            </div>";
         }
     }
 ?>
