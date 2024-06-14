@@ -35,9 +35,11 @@
     }
     
     if($receitas->num_rows == 0) {
-        echo "Não foi encontrada nenhuma receita!";
+        echo "<div class='alert alert-danger' role='alert'>Não foi encontrada nenhuma receita!</div>";
+        
     } else {
 
+        
         while ($obj_receita = $receitas->fetch_object()) {
             echo "<br>
             <div class=\"card\" style=\"width: 20rem; color: black; margin: 0 auto;\">

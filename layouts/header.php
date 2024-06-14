@@ -1,4 +1,3 @@
-
 <?php 
 
     if(isset($_POST["sair"])) {
@@ -17,7 +16,9 @@
                     if($validacao != null) {
                         echo "
                             <form method=\"post\">
-                                <input type=\"submit\" name=\"sair\"  value=\"Sair\" id=\"\" class=\"btn btn-dark\" style=\"margin=0; display=flex;\">
+                                <div style=\"text-align: center;\">
+                                    <input type=\"submit\" name=\"sair\"  value=\"Sair\" id=\"\" class=\"btn btn-dark\" style=\"margin: 0 auto; display: block;\">
+                                </div>
                             </form>
                         <a href=\"http://localhost/receitas-php/paginas/minhas-receitas.php\" style=\"margin-left: 33.33333333333333%;\">Minha receitas</a>";
         
@@ -27,5 +28,3 @@
 
                     
                 ?>
-            
-        
