@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2024 at 01:52 AM
+-- Generation Time: Jun 17, 2024 at 01:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,7 +40,8 @@ INSERT INTO `categorias` (`categoria_id`, `nome`) VALUES
 (1, 'Sobremesas'),
 (2, 'Jantar'),
 (3, 'Café da manhã'),
-(4, 'Doces');
+(4, 'Doces'),
+(6, 'Bolos');
 
 -- --------------------------------------------------------
 
@@ -55,16 +56,6 @@ CREATE TABLE `receitas` (
   `titulo` text NOT NULL,
   `texto` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `receitas`
---
-
-INSERT INTO `receitas` (`receita_id`, `usuario_id`, `categoria_id`, `titulo`, `texto`) VALUES
-(1, 9, 1, 'Sobremesa  1', 'Teste 2'),
-(2, 9, 3, 'Café', 'asdasdsadsa'),
-(3, 10, 1, '123', '123'),
-(4, 10, 1, '123', '123');
 
 -- --------------------------------------------------------
 
@@ -85,11 +76,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`usuario_id`, `usuario`, `nome`, `senha_hash`, `senha_normal`) VALUES
-(8, 'usuario', 'user', '$2y$10$F02xIYZIyOqGUyqZaT9qGeTZg8wdoKnLeHqs.JgXLqwjloyQ/qFCq', '123'),
-(9, 'joao', 'joao', '$2y$10$Sh2mcxYNEnp3XAYJLc5oeOI1nFmdVztjt330GrzCSHIF9lsfQq/oy', '123'),
-(10, '123', '123', '$2y$10$TAZDE4snKHtrAo3CYDBGOukXWik5gr4y9tNEcL8CHrxg.dpBbzsgu', '123'),
-(11, '1234', '12', '$2y$10$PLWIGRZ5BYj7sCb/T79zyulrvQ.8yf8d/erTPueXh./b.SyQ9MSx.', '123'),
-(12, 'zxc', 'zxc', '$2y$10$y7PwKFfw5vMlBUPjMw/ENezk8V0j/kLUpalL4Wk36Ur81aYlkYxSe', 'zxc');
+(13, 'admin', 'admin', '$2y$10$cSO9dH0G390EII24efZCBOz087Rg0C9keAj0eJUGHNtatgN/xA/2m', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -123,19 +110,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `categoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `categoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `receitas`
 --
 ALTER TABLE `receitas`
-  MODIFY `receita_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `receita_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `usuario_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `usuario_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
