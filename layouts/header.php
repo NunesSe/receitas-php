@@ -20,12 +20,15 @@
                                 <div style=\"text-align: center;\">
                                     <input type=\"submit\" name=\"sair\"  value=\"Sair\" id=\"\" class=\"btn btn-dark\" style=\"margin: 0 auto; display: block;\">
                                 </div>
-                            </form>
-                        <a href=\"http://localhost/receitas-php/paginas/minhas-receitas.php\" style=\"margin-left: 33.33333333333333%;\">Minha receitas</a>";
-        
-                    } else {
+                            </form>";
+                        if($_SESSION["usuario"] == "admin") {
+                            echo "<a href=\"http://localhost/receitas-php/paginas/admin.php\" style=\"margin-left: 33.33333333333333%;\">Admin</a>";
+                        } else {
+                            echo "<a href=\"http://localhost/receitas-php/paginas/minhas-receitas.php\" style=\"margin-left: 33.33333333333333%;\">Minhas receitas</a>";   
+                        }                    } else {
                         echo "<a href=\"http://localhost/receitas-php/paginas/login.php\">Logar</a>";
                     }
+                    
 
                     
                 ?>

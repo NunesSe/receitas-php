@@ -118,4 +118,18 @@
         $banco->query($q);
     }
 
+    function adicionarCategoria(string $nomeCategoria) {
+        global $banco;
+
+        $q = "INSERT INTO `categorias` (`categoria_id`, `nome`) VALUES (NULL, '$nomeCategoria')";
+        $banco->query($q);
+    }
+
+    function deletarCategoria($categoriaId) {
+        global $banco;
+    
+        $q = "DELETE FROM categorias WHERE categoria_id = '$categoriaId'";
+        $banco->query($q);
+    }
+    
 ?>
