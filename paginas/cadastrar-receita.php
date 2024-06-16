@@ -10,7 +10,6 @@
     
 <?php 
     echo "<div class='text-center position-absolute top-0 start-50 translate-middle'>";
-        echo "<div class='p-3 mb-2 bg-white text-dark rounded' style='width: 100vw; display: flex; justify-content: center;'>";
         session_start();
         require_once "../banco.php";
         require_once "../layouts/header.php";
@@ -20,8 +19,7 @@
             return;
     
         }
-        echo "</div>";
-        require_once "../forms/receita-cadastro.php";
+         require_once "../forms/receita-cadastro.php";
 
         $categoriaId = $_POST["categoria"] ?? null;
         $titulo = $_POST["titulo"] ?? null;

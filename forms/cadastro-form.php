@@ -18,7 +18,7 @@
     <br>
     <br>
     
-    <div class="p-3 mb-2 bg-white text-dark rounded"  style="width: 220px;">
+    <div class="p-3 mb-2 bg-white text-dark rounded"  style="margin: 0 auto; width: 220px;">
         <a href="../paginas/login.php">Já tem uma conta? Logue</a>
     </div>
 

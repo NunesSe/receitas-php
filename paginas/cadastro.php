@@ -6,8 +6,8 @@
     <title>Cadastro</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="p-3 mb-2 bg-dark text-white d-flex justify-content-center align-items-center vh-100">
-    <div class="text-center">
+<body class=" bg-dark text-white d-flex justify-content-center align-items-center ">
+    <div class="text-center  mb-2">
         <?php 
             session_start();
             require_once "../layouts/header.php";

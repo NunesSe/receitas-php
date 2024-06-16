@@ -1,4 +1,4 @@
-<a href="http://localhost/receitas-php/paginas/cadastrar-receita.php" class="btn btn-outline-light">Cadastrar uma receita</a>
+<a href="http://localhost/receitas-php/paginas/cadastrar-receita.php" class="btn btn-outline-light mb-2">Cadastrar uma receita</a>
 <br>
 <form action="" method="post">
     <select name="categoriaFiltro">
@@ -11,11 +11,11 @@
         }
         ?>
     </select>
-    <input type="submit" value="Aplicar filtro">
+    <input class="btn btn-outline-light mb-2" type="submit" value="Aplicar filtro">
     
 </form>
 <form action="" method="post">
-    <input value="resetar" type="submit" value="Resetar filtro">
+    <input class="btn btn-outline-light" type="submit" value="Resetar filtro">
 </form>
 
 <?php
@@ -46,7 +46,7 @@
                 <div class=\"card-body\">
                     <h5 class=\"card-title\">$obj_receita->tituloReceita</h5>
                     <h6 class=\"card-subtitle mb-2 text-body-secondary\">De $obj_receita->nomeUsuario (@$obj_receita->usuario)</h6>
-                    <h6 class=\"card-subtitle mb-2 text-body-secondary\">De Categoria: $obj_receita->nomeCategoria</h6>
+                    <h6 class=\"card-subtitle mb-2 text-body-secondary\">Categoria: $obj_receita->nomeCategoria</h6>
                     <p class=\"card-text\">$obj_receita->textoReceita.</p>
                 </div>
             </div>";

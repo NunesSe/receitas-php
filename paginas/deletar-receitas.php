@@ -44,7 +44,7 @@
     <input type="text" name="texto" id="" disabled value="<?=$obj->textoReceita?>">
 
     <br>
-    <input name="deletar" type="submit" value="Deletar receita!">
+    <input class="btn btn-light" name="deletar" type="submit" value="Deletar receita!">
 </form>
 
 <?php 

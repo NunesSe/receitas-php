@@ -8,6 +8,7 @@
 
 
         
+<div class='p-3 mb-5 bg-white text-dark rounded' style='width: 100vw; display: flex; justify-content: center;'>
        
             <a href="http://localhost/receitas-php" style="margin-right: 33.33333333333333%;">Receitas</a>
             <br>
@@ -28,3 +29,4 @@
 
                     
                 ?>
+</div>

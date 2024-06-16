@@ -1,5 +1,4 @@
 <form action="" method="post">
-    <br>
     <label for="">Usuario:</label>
     <input type="text" name="usuario" id="">
     <br>
